@@ -2,3 +2,4 @@ assets/pictures/*
 assets/bdd_eleve.csv
 bdd_retard_*
 registry_*
+__pycache__/
