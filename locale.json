@@ -1,0 +1,26 @@
+{
+  "badger_title" : {
+    "en" : "Clg Bagder - Checking in",
+    "fr" : "Clg Badger - Enregistrement"
+  },
+  "start_title" : {
+    "en" : "Clg Badger - Initialisation",
+    "fr" : "Clg Badger - Initialization"
+  },
+  "labels_params" : {
+    "en" : ["Room ID", "Online", "Language", "Path student data base", "Path student pictures"],
+    "fr" : ["Salle numéro", "Mode en ligne", "Langue", "Lien vers base de données élève", "Lien vers les photos élèves"]
+  },
+  "error" : {
+    "en" : "Error",
+    "fr" : "Erreur"
+  },
+  "error_student_db_not_found" : {
+    "en" : "Cannot find student database",
+    "fr" : "Base de données élèves introuvable"
+  },
+  "button_viewer" : {
+    "en" : "Viewer",
+    "fr" : "Visionneuse"
+  }
+}

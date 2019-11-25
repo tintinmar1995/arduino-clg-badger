@@ -1,0 +1,8 @@
+{
+  "id_room" : "S114",
+  "online" : false,
+  "lang"    : "fr",
+  "path_student" : "assets/bdd_eleve.csv",
+  "path_pictures" : "assets/pictures/",
+  "fullscreen" : false
+}
