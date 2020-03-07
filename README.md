@@ -10,7 +10,7 @@ En mode en ligne, l'application met en route un web service permettant un accès
 
 Une carte Arduino avec un capteur RFID.
 
-Python 3 avec les packages précisées dans `requirements.txt`. Pour lancer les packages, lancer la commande suivante (sous Linux).
+Python 3 avec les packages précisées dans `requirements.txt`. Pour installer les packages, lancer la commande suivante (sous Linux).
 
 ```bash
 pip install -r requirements.txt
