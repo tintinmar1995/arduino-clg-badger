@@ -2,7 +2,7 @@
 import os
 import re
 import matplotlib.pyplot as plt
-import threading as thr
+from multiprocessing import Process
 import serial as srl
 import time
 import struct
@@ -69,18 +69,30 @@ def Start():
     with open('config.json') as f:
         config = json.load(f)
 
-    # Connect on port
-    if(InitSerial()==True):
-        # Listen on Port and write to file in asynchrone mode
-        listening = thr.Thread(target=ListenOnPort, args=[registry_name])
-        listening.start()
-        # Start UI
-        print("Thread ListenOnPort correctly launched. Starting user interface... ")
-        ui.Start(registry_name, config)
+    # Run webapp
+    if(config["online"]):
+        webapp = Process(target=lambda: os.system("python3 webapp/main.py"))
+        webapp.start()
 
-    # Stop everything when UI is gone
-    print("Closing serial port...")
-    ArduinoSerial.close()
-    print("Ready to quit")
+    if False:
+        # Connect on port
+        if(InitSerial()==True):
+            # Listen on Port and write to file in asynchrone mode
+            listening = Process(target=ListenOnPort, args=[registry_name])
+            listening.start()
+            # Start UI
+            print("Thread ListenOnPort correctly launched. Starting user interface... ")
+            ui.Start(registry_name, config)
+
+        # Stop everything when UI is gone
+        print("Closing serial port...")
+        listening.terminate()
+        listening.join()
+        print("Ready to quit")
+
+    time.sleep(10)
+    print("Closing webapp..")
+    webapp.terminate()
+    webapp.join()
 
 Start()

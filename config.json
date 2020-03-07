@@ -1,6 +1,7 @@
 {
   "id_room" : "S114",
-  "online" : false,
+  "online" : true,
+  "dev-web" : true,
   "lang"    : "fr",
   "path_student" : "assets/bdd_eleve.csv",
   "path_pictures" : "assets/pictures/",

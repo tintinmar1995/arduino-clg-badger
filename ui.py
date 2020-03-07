@@ -110,7 +110,7 @@ def Start(input_registry_name, input_config):
     tk.Button(init, text =locale["button_viewer"][config["lang"]], command=badger).pack(side=tk.RIGHT, padx=5, pady=10)
 
     try :
-        data_eleve = pd.read_csv(input_config["path_student"])
+        data_eleve = pd.read_csv(config["path_student"])
     except:
         showerror(locale["error"][config["lang"]], locale["error_student_db_not_found"][config["lang"]])
 
