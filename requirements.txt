@@ -1,1 +1,5 @@
 Flask
+pyserial
+tkinter
+PIL
+pandas
